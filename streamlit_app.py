@@ -18,6 +18,14 @@ In the meantime, below is an example of what you can do with just a few lines of
 df = pd.read_csv('https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv')                                                                                                                    
 st.dataframe(data=df) 
 
+url = 'https://ad1p7rqhyj.execute-api.eu-west-2.amazonaws.com/test/predict'
+data = {'url': 'https://i.ibb.co/ZXs9SJN/mdb182.jpg'}                      
+                                                                           
+result = requests.post(url, json=data).json() 
+
+result
+
+
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
     num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
