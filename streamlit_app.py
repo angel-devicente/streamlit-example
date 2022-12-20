@@ -12,11 +12,13 @@ import requests
 
 idx = st.slider("Mammography image number", 1, 2, 1)
 
-url = 'https://ad1p7rqhyj.execute-api.eu-west-2.amazonaws.com/test/predict'  
-data = {'url': 'https://mammography-test.s3.eu-west-2.amazonaws.com/mdb002.jpg'}                      
+url = 'https://ad1p7rqhyj.execute-api.eu-west-2.amazonaws.com/test/predict'
+
+image = 'https://mammography-test.s3.eu-west-2.amazonaws.com/mdb00' + str(idx) + '.jpg'
+data = {'url': image}                      
 
 st.image(
-    "https://mammography-test.s3.eu-west-2.amazonaws.com/mdb002.jpg",
+    image,
     width=400, # Manually Adjust the width of the image as per requirement
 )
 
