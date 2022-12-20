@@ -10,7 +10,7 @@ import requests
 
 """
 
-idx = st.slider("Mammography image number", 1, 2, 1)
+idx = st.slider("Mammography image number", 1, 322, 1)
 
 url = 'https://ad1p7rqhyj.execute-api.eu-west-2.amazonaws.com/test/predict'
 
