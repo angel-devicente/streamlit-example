@@ -14,7 +14,7 @@ idx = st.slider("Mammography image number", 1, 322, 1)
 
 url = 'https://ad1p7rqhyj.execute-api.eu-west-2.amazonaws.com/test/predict'
 
-image = 'https://mammography-test.s3.eu-west-2.amazonaws.com/mdb00' + str(idx) + '.jpg'
+image = 'https://mammography-test.s3.eu-west-2.amazonaws.com/mdb' + f'{idx:03d}' + '.jpg'
 data = {'url': image}                      
 
 st.image(
