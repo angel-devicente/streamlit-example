@@ -23,6 +23,7 @@ st.image(
 )
 
 if st.button('Predict'):
-    result = requests.post(url, json=data).json() 
+    result = requests.post(url, json=data).json()
+    url
     result
 
