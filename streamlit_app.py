@@ -10,10 +10,11 @@ import requests
 
 """
 
-idx = st.slider("Mammography image number", 1, 200, 100)
+idx = st.slider("Mammography image number", 1, 2, 1)
 
 url = 'https://ad1p7rqhyj.execute-api.eu-west-2.amazonaws.com/test/predict'  
-data = {'url': 'https://i.ibb.co/ZXs9SJN/mdb182.jpg'}                      
+data = {'url': 'https://mammography-test.s3.eu-west-2.amazonaws.com/mdb002.jpg'}                      
+
 
 if st.button('Predict'):
     result = requests.post(url, json=data).json() 
